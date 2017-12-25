@@ -1,3 +1,5 @@
 # Gutenberg Development Course Repo
 
-Examples of how to build blocks with the new WordPress editor.
+Examples of how to build and organize blocks with the new WordPress editor.
+
+Accompany the [Gutenberg Development Course](https://gutenberg.courses/).
