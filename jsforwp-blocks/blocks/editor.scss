@@ -1,0 +1,16 @@
+@import 'variables';
+
+[class^="wp-block-jsforwp"] {
+  margin: 0;
+  max-width: 100%;
+}
+
+.wp-block-jsforwp-example-demo {
+  padding: 1rem;
+}
+
+.editor-visual-editor [class^="wp-block-jsforwp"],
+.editor-visual-editor [class^="wp-block-jsforwp"] p {
+  font-family: $font-body;
+  font-size: 100%;
+}

@@ -1,0 +1,83 @@
+@import url(http://fonts.googleapis.com/css?family=Archivo+Black|PT+Sans:400italic,700italic,400,700);
+[class^="wp-block-jsforwp"] {
+  font-family: "PT Sans", sans-serif;
+  background: rgba(254, 243, 224, 0.52);
+  border: 1px #f7b733 solid;
+  color: #222;
+  padding: 1rem 1rem 0;
+  position: relative;
+  margin: 2rem auto 0;
+  max-width: 720px; }
+
+.wp-block-jsforwp-example-demo {
+  padding: 0 1rem; }
+
+[class^="wp-block-jsforwp"]::before {
+  content: '';
+  position: absolute;
+  height: 110px;
+  width: 110px;
+  bottom: 2px;
+  opacity: 1;
+  right: 0;
+  background-image: url("../images/js-wapuu.svg");
+  background-repeat: no-repeat;
+  background-size: 130px;
+  background-position-x: 20px;
+  color: #FEF3E0;
+  transition: all .2s ease-in-out; }
+
+.wp-block-jsforwp-example-demo::before {
+  background: none;
+  content: none; }
+
+[class^="wp-block-jsforwp"]:hover::before,
+.is-selected [class^="wp-block-jsforwp"]::before {
+  background-position-x: 44px; }
+
+[class^="wp-block-jsforwp"]::after {
+  font-size: .8rem;
+  font-family: "PT Sans", sans-serif;
+  position: absolute;
+  padding: 2px 2px 0 4px;
+  bottom: 0;
+  right: 0;
+  background: #387BB2;
+  color: #FEF3E0;
+  z-index: 100;
+  transition: width .6s ease-in-out;
+  text-align: right; }
+
+[class^="wp-block-jsforwp"] h2 {
+  font-family: "Archivo Black", serif;
+  margin: 1rem 0; }
+
+[class^="wp-block-jsforwp"] p {
+  font-family: "PT Sans", sans-serif; }
+
+[class^="wp-block-jsforwp"] pre {
+  background-color: #222;
+  border-top: 1px #f7b733 dashed;
+  color: #fff;
+  padding: 1rem;
+  border: 1px black solid;
+  margin: 1rem 0;
+  overflow: auto; }
+.wp-block-jsforwp-register-demo::after {
+  content: '/blocks/00-08-register-demo'; }
+.wp-block-jsforwp-register-title::after {
+  content: '/blocks/00-01-register-title'; }
+.wp-block-jsforwp-example-category::after {
+  content: '/blocks/00-02-register-category'; }
+.wp-block-jsforwp-register-icon::after {
+  content: '/blocks/register-block-type/03-register-icon'; }
+.wp-block-jsforwp-register-keywords::after {
+  content: '/blocks/register-block-type/04-register-keywords'; }
+.wp-block-jsforwp-example-edit::after {
+  content: '/blocks/00-05-register-edit'; }
+.wp-block-jsforwp-example-save::after {
+  content: '/blocks/00-06-register-save'; }
+.wp-block-jsforwp-example-attributes::after {
+  content: '/blocks/00-07-register-attributes'; }
+.wp-block-jsforwp-example-all::after {
+  content: '/blocks/00-08-register-all'; }

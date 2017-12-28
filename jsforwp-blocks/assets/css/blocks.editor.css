@@ -1,0 +1,12 @@
+@import url(http://fonts.googleapis.com/css?family=Archivo+Black|PT+Sans:400italic,700italic,400,700);
+[class^="wp-block-jsforwp"] {
+  margin: 0;
+  max-width: 100%; }
+
+.wp-block-jsforwp-example-demo {
+  padding: 1rem; }
+
+.editor-visual-editor [class^="wp-block-jsforwp"],
+.editor-visual-editor [class^="wp-block-jsforwp"] p {
+  font-family: "PT Sans", sans-serif;
+  font-size: 100%; }

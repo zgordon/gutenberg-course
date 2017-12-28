@@ -1,0 +1,79 @@
+@import 'variables';
+
+
+[class^="wp-block-jsforwp"] {
+  font-family: $font-body;
+  background: $yellow-lightest;
+  border: 1px $yellow solid;
+  color: $font-color-dark;
+  padding: 1rem 1rem 0;
+  position: relative;
+  margin: 2rem auto 0;
+  max-width: 720px;
+}
+
+.wp-block-jsforwp-example-demo {
+  padding: 0 1rem;
+}
+
+[class^="wp-block-jsforwp"]::before {
+  content: '';
+  position: absolute;
+  height: 110px;
+  width: 110px;
+  bottom: 2px;
+  opacity: 1;
+  right: 0;
+  background-image: url('../images/js-wapuu.svg');
+  background-repeat: no-repeat;
+  background-size: 130px;
+  background-position-x: 20px;
+  color: $yellow-light;
+  transition: all .2s ease-in-out;
+}
+
+.wp-block-jsforwp-example-demo::before {
+  background: none;
+  content: none;
+}
+
+[class^="wp-block-jsforwp"]:hover::before,
+.is-selected [class^="wp-block-jsforwp"]::before {
+  background-position-x: 44px;
+}
+
+
+[class^="wp-block-jsforwp"]::after {
+  font-size: .8rem;
+  font-family: $font-body;
+  position: absolute;
+  padding: 2px 2px 0 4px;
+  bottom: 0;
+  right: 0;
+  background: $blue;
+  color: $yellow-light;
+  z-index: 100;
+  transition: width .6s ease-in-out;
+  text-align: right;
+}
+
+[class^="wp-block-jsforwp"] h2 {
+  font-family: $font-header;
+  margin: 1rem 0;
+}
+
+[class^="wp-block-jsforwp"] p {
+  font-family: $font-body;
+}
+
+[class^="wp-block-jsforwp"] pre {
+  background-color: #222;
+  border-top: 1px $yellow dashed;
+  color: #fff;
+  padding: 1rem;
+  border: 1px black solid;
+  //width: calc(100% + 2rem);
+  //margin: 0 -1rem -1px;
+  margin: 1rem 0;
+  overflow: auto;
+}
