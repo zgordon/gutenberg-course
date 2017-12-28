@@ -10,3 +10,16 @@
 .editor-visual-editor [class^="wp-block-jsforwp"] p {
   font-family: "PT Sans", sans-serif;
   font-size: 100%; }
+.my-content {
+  border: 1px transparent solid;
+  padding: 4px 8px;
+  margin: -4px -8px; }
+
+.is-selected .my-content,
+.my-content:focus {
+  border: 1px #f7b733 dashed;
+  background: rgba(255, 255, 255, 0.8); }
+
+.is-selected .my-content:hover,
+.my-content:focus {
+  border: 1px #f7b733 solid; }

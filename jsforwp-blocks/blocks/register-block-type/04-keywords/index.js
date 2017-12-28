@@ -6,7 +6,7 @@ const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
 
 const blockHeading = __( 'registerBlockType [4/8] - Keywords Setting' );
-const blockDescription = __( 'The keyword setting for registerBlockType provides three additional keyword / phrases that will display your block when searched for. Limited to 3.' );
+const blockDescription = __( 'The keyword setting for registerBlockType() provides three additional keyword / phrases that will display your block when searched for. Limited to 3.' );
 
 const output = ( props ) => {
     return <div className={props.className}>

@@ -47,8 +47,7 @@ settings.edit               = `    edit: props => {
 settings.saveComment        = `    // Determines what is displayed on the frontend\n`;
 settings.save               = `    save: props => {
       return (
-        <div className={props.className}>
-          {blockHeader}
+        <div className={props.className}> 
           {props.attributes.content}
         </div>
       );

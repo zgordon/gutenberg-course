@@ -59,11 +59,18 @@
 
 [class^="wp-block-jsforwp"] h2 {
   font-family: $font-header;
-  margin: 1rem 0;
+}
+
+.entry-content [class^="wp-block-jsforwp"] h2 {
+  margin: 1.4rem 0 1rem;
 }
 
 [class^="wp-block-jsforwp"] p {
   font-family: $font-body;
+}
+
+.entry-content [class^="wp-block-jsforwp"] p {
+  margin: 1rem 0;
 }
 
 [class^="wp-block-jsforwp"] pre {

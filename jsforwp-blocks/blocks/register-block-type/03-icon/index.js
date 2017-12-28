@@ -6,7 +6,7 @@ const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
 
 const blockHeading = __( 'registerBlockType [3/8] - Icon Setting' );
-const blockDescription = __( 'The icon setting for registerBlockType determines what icon will represent your custom block.  Can use a WP Dashicon or custom SVG.' );
+const blockDescription = __( 'The icon setting for registerBlockType() determines what icon will represent your custom block.  Can use a WP Dashicon or custom SVG.' );
 
 const output = ( props ) => {
     return <div className={props.className}>

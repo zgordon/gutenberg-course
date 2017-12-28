@@ -6,7 +6,7 @@ const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
 
 const blockHeading = __( 'registerBlockType [2/8] - Category Setting' );
-const blockDescription = __( 'The category setting for registerBlockType determines under which heading a user can find your block.  Options include "common", "formatting", "layout", "widgets" and "embed".' );
+const blockDescription = __( 'The category setting for registerBlockType() determines the heading / section / category in which a user can find your block.  Options include "common", "formatting", "layout", "widgets" and "embed."' );
 
 const output = ( props ) => {
     return <div className={props.className}>

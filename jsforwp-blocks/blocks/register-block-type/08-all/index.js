@@ -5,12 +5,12 @@ import './style.scss';
 const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
 const el = wp.element.createElement;
-const blockTitle = __( 'registerBlockType [8/8] - All Together' );
+const blockHeading = __( 'registerBlockType [8/8] - All Together' );
 const blockText = __( 'Here we see all of the registerBlockType settings together.' );
 
 const output = ( props ) => {
     return <div className={props.className}>
-        <h2>{blockTitle}</h2>
+        <h2>{blockHeading}</h2>
         <p>{blockText}</p>
         <pre>
             {settings.opening}
@@ -39,7 +39,7 @@ const output = ( props ) => {
 export default registerBlockType(
     'jsforwp/example-all',
     {
-        title: blockTitle,
+        title: blockHeading,
         category: 'common',
         icon: blockIcons.wapuu,
         edit: ( props ) => output( props ),
