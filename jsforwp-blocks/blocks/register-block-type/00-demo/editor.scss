@@ -1,17 +1,19 @@
-.my-content {
-  border: 1px transparent solid;
-  padding: 4px 8px;
-  margin: -4px -8px;
-}
+.wp-block-jsforwp-register-demo {
+  .my-content {
+    border: 1px transparent solid;
+    padding: 4px 8px;
+    margin: -4px -8px;
+  }
 
-.is-selected .my-content,
-.my-content:focus {
-  border: 1px #f7b733 dashed;
-  background: rgba(255,255,255,.8);
-}
+  .is-selected .my-content,
+  .my-content:focus {
+    border: 1px #f7b733 dashed;
+    background: rgba(255,255,255,.8);
+  }
 
-.is-selected .my-content:hover,
-.my-content:focus {
-  border: 1px #f7b733 solid;
+  .is-selected .my-content:hover,
+  .my-content:focus {
+    border: 1px #f7b733 solid;
 
+  }
 }

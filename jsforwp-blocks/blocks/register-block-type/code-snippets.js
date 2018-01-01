@@ -13,10 +13,10 @@ settings.icon               = `    icon: 'wordpress-alt',\n`;
 settings.iconAltComment     = `    // Custom SVG Icon\n`;
 settings.iconAlt            = `    icon: <svg width="20" height="20"><circle cx="10" cy="10" r="8" stroke="black" strokeWidth="2" fill="white" /></svg>,\n`;
 settings.keywordsComment    = `    // Limit to 3 Keywords / Phrases\n`;
-settings.keywords           = `    keywords: [ 
-      __( 'Example' ), 
-      __( 'Project' ), 
-      __( 'Code Samples' ) 
+settings.keywords           = `    keywords: [
+      __( 'Example' ),
+      __( 'Project' ),
+      __( 'Code Samples' )
     ],\n`;
 settings.attributesComment  = `    // Attributes set for each piece of dynamic data used in your block\n`;
 settings.attributes         = `    attributes: {
@@ -32,14 +32,14 @@ settings.edit               = `    edit: props => {
         props.setAttributes( { content: value } );
       };
       return (
-        <div className={props.className}>
+        <div className={ props.className }>
           <Editable
             tagname="div"
             multiline="p"
             className="my-content"
-            placeholder={__( 'Add your content...' )}
-            value={props.attributes.content}
-            onChange={onChangeContent}
+            placeholder={ __( 'Add your content...' ) }
+            value={ props.attributes.content }
+            onChange={ onChangeContent }
           />
         </div>
       );
@@ -47,8 +47,10 @@ settings.edit               = `    edit: props => {
 settings.saveComment        = `    // Determines what is displayed on the frontend\n`;
 settings.save               = `    save: props => {
       return (
-        <div className={props.className}> 
-          {props.attributes.content}
+        <div className={ props.className }>
+          <div class="my-content">
+            { props.attributes.content }
+          </div>
         </div>
       );
     },\n`;

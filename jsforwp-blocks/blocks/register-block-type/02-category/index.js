@@ -1,4 +1,4 @@
-import blockIcons from '../../block-icons.js';
+import blockIcons from '../icons.js';
 import settings from '../code-snippets.js';
 import './style.scss';
 

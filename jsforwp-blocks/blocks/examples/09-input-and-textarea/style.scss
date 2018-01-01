@@ -1,0 +1,20 @@
+.wp-block-jsforwp-input-textarea {
+
+  h2 {
+
+    input {
+      font-size: 1.4rem;
+    }
+
+  }
+
+  input[type="text"],
+  textarea {
+    width: 100%;
+  }
+
+  textarea {
+    min-height: 6rem;
+  }
+
+}

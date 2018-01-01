@@ -5,8 +5,6 @@ import './editor.scss';
 const { __ } = wp.i18n;
 // Get registerBlockType and Editable from wp.blocks
 const { registerBlockType, Editable } = wp.blocks;
-// Rename wp.element.createElement() to el() for ease of use
-const el = wp.element.createElement;
 // Set the h2 header for the block since it is reused
 const blockHeader = <h2>{ __( 'Block Demo' ) }</h2>;
 
@@ -15,7 +13,7 @@ const blockHeader = <h2>{ __( 'Block Demo' ) }</h2>;
  */
 export default registerBlockType(
     // Namespaced, hyphens, lowercase, unique name
-    'jsforwp/example-demo',
+    'jsforwp/register-demo',
     {
         // Localize title using wp.i18n.__()
         title: __( 'registerBlockType - Demo' ),
@@ -27,7 +25,7 @@ export default registerBlockType(
         keywords: [
             __( 'Example' ),
             __( 'Project' ),
-            __( 'Demo' ),
+            __( 'Code Samples' ),
         ],
         // Set for each piece of dynamic data used in your block
         attributes: {
@@ -45,14 +43,14 @@ export default registerBlockType(
             };
             // Return the markup displayed in the editor, including a core Editable field
             return <div className={props.className}>
-                {blockHeader}
+                { blockHeader }
                 <Editable
                     tagname="div"
                     multiline="p"
                     className="my-content"
-                    placeholder={__( 'Enter your ipsum here..' )}
-                    value={props.attributes.content}
-                    onChange={onChangeContent}
+                    placeholder={ __( 'Enter your ipsum here..' ) }
+                    value={ props.attributes.content }
+                    onChange={ onChangeContent }
                 />
             </div>;
         },
@@ -62,7 +60,9 @@ export default registerBlockType(
             return (
                 <div className={ props.className }>
                     { blockHeader }
-                    { props.attributes.content }
+                    <div className="my-content">
+                      { props.attributes.content }
+                    </div>
                 </div>
             );
         },
