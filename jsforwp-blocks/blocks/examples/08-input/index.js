@@ -3,6 +3,7 @@
  */
 import icon from './icon';
 import Input from './input';
+import './style.scss';
 
 /**
  * Internal block libraries
@@ -39,8 +40,7 @@ export default registerBlockType(
             <div className={ props.className }>
               <Input
                 id="example-input-field"
-                className="wide"
-                labelText="Custom text field"
+                labelText="Custom Input Field"
                 { ...{ onChangeInput, ...props } }
               />
             </div>

@@ -56,7 +56,6 @@ export default class Inspector extends Component {
           <PanelColor
             title={ __( 'Contrast Background Color' ) }
             colorValue={ this.props.attributes.contrastBackgroundColor }
-            initialOpen={ false }
           >
             <ColorPalette
               value={ this.props.attributes.contrastBackgroundColor }

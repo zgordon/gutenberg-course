@@ -67,20 +67,23 @@ export default registerBlockType(
             <div className={ props.className }>
 
               { ! props.attributes.imgID ? (
+
                 <MediaUploadButton
                   buttonProps={ {
                     className: 'components-button button button-large'
                   } }
-                  onSelect={onSelectImage}
+                  onSelect={ onSelectImage }
                   type="image"
-                  value={props.attributes.id}
+                  value={ props.attributes.imgID }
                 >
                   <Button>
                     { icons.upload }
                     { __( ' Upload Image') }
                   </Button>
                 </MediaUploadButton>
+
               ) : (
+
                 <p class="image-wrapper">
                   <img
                     src={ props.attributes.imgURL }
@@ -94,6 +97,7 @@ export default registerBlockType(
                       { icons.remove }
                     </Button>
                   ) : null }
+
                 </p>
               )}
 

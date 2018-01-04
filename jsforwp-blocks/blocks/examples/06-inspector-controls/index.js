@@ -17,14 +17,13 @@ const {
   BlockAlignmentToolbar,
   InspectorControls,
   BlockDescription,
-  ColorPalette,
 } = wp.blocks;
 const {
   Toolbar,
   Button,
   Tooltip,
   PanelBody,
-  PanelColor,
+  PanelRow,
   FormToggle,
 } = wp.components;
 
@@ -56,17 +55,10 @@ export default registerBlockType(
             type: 'boolean',
             default: false,
           },
-          contrastBackgroundColor: {
-            type: 'string',
-            default: '#000000'
-          },
         },
         edit: props => {
           const toggleHighContrast = () => {
             props.setAttributes( { highContrast: ! props.attributes.highContrast } );
-          }
-          const onChangeContrastBackgroundColor = value => {
-            props.setAttributes( { contrastBackgroundColor: value } );
           }
 
           return [
@@ -77,9 +69,10 @@ export default registerBlockType(
                   <p>{ __( 'Block controls.  Do more.' ) }</p>
                 </BlockDescription>
 
-                <PanelBody title={ __( 'High Contrast' ) }>
-                  {/* contrastButton */}
-                  <div className="blocks-base-control blocks-toggle-control">
+                <PanelBody title={ __( 'High Contrast' ) }
+                >
+
+                  <PanelRow>
                     <label
                       htmlFor="high-contrast-form-toggle"
                       className="blocks-base-control__label"
@@ -92,21 +85,9 @@ export default registerBlockType(
               				checked={ !! props.attributes.highContrast }
               				onChange={ toggleHighContrast }
               			/>
-                  </div>
-                </PanelBody>
+                  </PanelRow>
 
-                { props.attributes.highContrast ?
-                  <PanelColor
-                    title={ __( 'Contrast Background Color' ) }
-                    colorValue={ props.attributes.contrastBackgroundColor }
-                    initialOpen={ open }
-                  >
-                    <ColorPalette
-                      value={ props.attributes.contrastBackgroundColor }
-                      onChange={ ( value ) => props.setAttributes( { contrastBackgroundColor: value } ) }
-                    />
-                  </PanelColor>
-                : null }
+                </PanelBody>
 
               </InspectorControls>
   					),
@@ -135,13 +116,11 @@ export default registerBlockType(
               </BlockControls>
             ),
             <div
-              style={ {
-                backgroundColor: props.attributes.contrastBackgroundColor
-              } }
               className={ classnames(
                 props.className,
                 { 'high-contrast': props.attributes.highContrast },
-              ) }>
+              ) }
+            >
               <Editable
                 tagName="div"
                 multiline="p"
@@ -161,10 +140,7 @@ export default registerBlockType(
                 'message-body',
                 { 'high-contrast': props.attributes.highContrast },
               ) }
-              style={ {
-                textAlign: props.attributes.alignment,
-                backgroundColor: props.attributes.contrastBackgroundColor,
-              } }
+              style={ { textAlign: props.attributes.alignment } }
             >
               { props.attributes.message }
             </div>

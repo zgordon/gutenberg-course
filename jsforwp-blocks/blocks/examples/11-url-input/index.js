@@ -63,15 +63,18 @@ export default registerBlockType(
             >
               { !! props.focus ? (
                 [
-                  <Input
-                    id="link-text"
-                    labelText={ __( 'Link text' ) }
-                    { ...{ onChangeInput, ...props } }
-                  />,
+                  <p>
+                    <Input
+                      id="example-input-field"
+                      labelText="Custom text field"
+                      inputValue={ props.attributes.text }
+                      onChangeInput={ onChangeInput }
+                    />
+                  </p>,
                   <form
                     key="form-link"
                     className="blocks-button__inline-link"
-                    onSubmit={event => event.preventDefault()}
+                    onSubmit={ event => event.preventDefault() }
                   >
                     <Tooltip text="Add Link">
                       {icons.link}

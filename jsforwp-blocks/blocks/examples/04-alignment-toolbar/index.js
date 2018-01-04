@@ -14,11 +14,6 @@ const {
   BlockControls,
   BlockAlignmentToolbar,
 } = wp.blocks;
-const {
-  Dashicon,
-  Toolbar,
-  Button,
-} = wp.components;
 
 /**
   * Register block

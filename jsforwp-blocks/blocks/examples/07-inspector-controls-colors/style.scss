@@ -1,10 +1,11 @@
 .wp-block-jsforwp-inspector-controls-color {
 
-  padding: .2rem;
-  font-size: 1.2rem;
+  background: white;
+  padding: 1rem;
 
   &:not(.high-contrast) {
     background: white !important;
+    border: 5px white solid !important;
   }
 
   &.high-contrast {

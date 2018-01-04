@@ -18,6 +18,7 @@ const {
   BlockAlignmentToolbar,
 } = wp.blocks;
 const {
+  Dashicon,
   Toolbar,
   Button,
   Tooltip,
@@ -47,7 +48,7 @@ export default registerBlockType(
             type: 'string',
           },
           highContrast: {
-            type: 'boolean'
+            type: 'boolean',
           }
         },
         edit: props => {
@@ -61,7 +62,7 @@ export default registerBlockType(
             ) }>
               {
       					!! props.focus && (
-                  <BlockControls key="controls">
+                  <BlockControls key="custom-controls">
                   	<AlignmentToolbar
                   		value={ props.attributes.alignment }
                   		onChange={ ( value ) => props.setAttributes( { alignment: value } ) }
@@ -78,7 +79,7 @@ export default registerBlockType(
                           ) }
                           onClick={ toggleHighContrast }
                         >
-                          {icon}
+                          { icon }
                         </Button>
                       </Tooltip>
                     </Toolbar>

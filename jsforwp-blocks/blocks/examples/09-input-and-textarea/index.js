@@ -39,7 +39,7 @@ export default registerBlockType(
           }
         },
         edit: props => {
-          const onChangeIntput = ( event ) => {
+          const onChangeInput = ( event ) => {
             props.setAttributes( { title: event.target.value } );
           };
           const onChangeTextArea = ( event ) => {
@@ -50,17 +50,19 @@ export default registerBlockType(
               <h2 class="message-title">
                 <Input
                   id="example-input-field"
-                  className="wide"
                   labelText="Custom text field"
-                  { ...{ onChangeIntput, ...props } }
+                  isFullWidth={ true }
+                  inputValue={ props.attributes.title }
+                  onChangeInput={ onChangeInput }
                 />
               </h2>
               <p>
                 <Textarea
                   id="example-textarea"
-                  className="wide"
                   labelText="Custom textarea"
-                  { ...{ onChangeTextArea, ...props } }
+                  isFullWidth={ true }
+                  inputValue={ props.attributes.content }
+                  onChangeTextArea={ onChangeTextArea }
                 />
               </p>
             </div>

@@ -5,6 +5,7 @@
   }
 
   button {
+
     &.remove-image {
       background-color: red;
       border: 2px red solid;
@@ -13,6 +14,7 @@
       top: 0;
       left: 0;
       opacity: .9;
+      
       svg {
         background: red;
         fill: white;

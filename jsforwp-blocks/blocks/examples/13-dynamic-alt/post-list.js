@@ -10,10 +10,10 @@ export default class PostList extends Component {
       posts: [ { title: { rendered: __( 'Loading posts..' ) } } ],
     };
 
-    this.latestPostsRequest = getLatestPosts();
-    this.latestPostsRequest
-      .then( latestPosts => this.setState( { posts: latestPosts } ) );
-      
+    getLatestPosts()
+      .then( posts => {
+        return this.setState( { posts } );
+      } );
   }
 
   render() {

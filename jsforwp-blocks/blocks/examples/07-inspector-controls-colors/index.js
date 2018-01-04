@@ -64,7 +64,12 @@ export default registerBlockType(
 				),
         !! props.focus && (
           <Controls
-            { ...{ toggleHighContrast, onChangeAlignment, ...props} }
+            toggleHighContrast={ toggleHighContrast }
+            onChangeAlignment={ onChangeAlignment }
+            attributes={ {
+              highContrast: props.attributes.highContrast,
+              alignment: props.attributes.alignment,
+            } }            
           />
         ),
         <div

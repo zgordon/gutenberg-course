@@ -1,3 +1,11 @@
+/**
+ * Component dependencies
+ */
+import classnames from 'classnames';
+
+/**
+ * Internal block libraries
+ */
 const { __ } = wp.i18n;
 const { Component } = wp.element;
 
@@ -21,7 +29,10 @@ export default class Input extends Component {
           id={ this.props.id }
           type="text"
           placeholder={ __( 'Add your text' ) }
-          className={ this.props.className }
+          className={ classnames(
+            'jsforwp-field',
+            { 'wide': this.props.isFullWidth }
+          ) }
           value={ this.props.attributes.title }
           focus={ !! this.props.focus }
           onFocus={ this.props.setFocus }

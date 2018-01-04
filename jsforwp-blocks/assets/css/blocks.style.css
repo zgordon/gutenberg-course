@@ -95,7 +95,7 @@
     font-size: 2rem;
     margin: 1rem 0; }
   .wp-block-jsforwp-static p {
-    font-size: 2.4rem; }
+    font-size: 1.4rem; }
 .wp-block-jsforwp-editable {
   background: rgba(254, 243, 224, 0.52);
   border: 5px #f7b733 solid;
@@ -147,21 +147,32 @@
   .wp-block-jsforwp-custom-toolbar li {
     list-style-position: inside; }
 .wp-block-jsforwp-inspector-controls {
-  padding: .2rem;
-  font-size: 1.2rem; }
-  .wp-block-jsforwp-inspector-controls:not(.high-contrast) {
-    background: white !important; }
+  background: rgba(254, 243, 224, 0.52);
+  border: 5px #f7b733 solid;
+  padding: 1rem; }
   .wp-block-jsforwp-inspector-controls.high-contrast {
-    background: black;
+    background: #000;
+    border-color: #000;
     color: white; }
+  .wp-block-jsforwp-inspector-controls h2 {
+    color: #f7b733;
+    font-size: 2rem;
+    margin: 1rem 0; }
+  .wp-block-jsforwp-inspector-controls p {
+    font-size: 1.4rem; }
+  .wp-block-jsforwp-inspector-controls li {
+    list-style-position: inside; }
 .wp-block-jsforwp-inspector-controls-color {
-  padding: .2rem;
-  font-size: 1.2rem; }
+  background: white;
+  padding: 1rem; }
   .wp-block-jsforwp-inspector-controls-color:not(.high-contrast) {
-    background: white !important; }
+    background: white !important;
+    border: 5px white solid !important; }
   .wp-block-jsforwp-inspector-controls-color.high-contrast {
     background: black;
     color: white; }
+.wp-block-jsforwp-input input.jsforwp-field.wide {
+  width: calc(100% - 2px); }
 .wp-block-jsforwp-input-textarea h2 input {
   font-size: 1.4rem; }
 

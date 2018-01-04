@@ -32,10 +32,13 @@ const extractConfig = {
 };
 
 module.exports = {
-  entry: './blocks/index.js',
+  entry: {
+    './assets/js/editor.blocks' : './blocks/index.js',
+    // './assets/js/frontend.blocks' : './blocks/frontend.js',
+  },
   output: {
-    path: path.resolve( __dirname, './assets/js/' ),
-    filename: 'blocks.min.js',
+    path: path.resolve( __dirname ),
+    filename: '[name].js',
   },
   watch: true,
   devtool: 'cheap-eval-source-map',

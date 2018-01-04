@@ -10,7 +10,6 @@ import './style.scss';
 const { __ } = wp.i18n;
 const {
   registerBlockType,
-  createBlock,
   Editable
 } = wp.blocks;
 
@@ -55,7 +54,7 @@ export default registerBlockType(
         },
         save: props => {
           return (
-            <div>
+            <div className="message-body">
               { props.attributes.message }
             </div>
           );

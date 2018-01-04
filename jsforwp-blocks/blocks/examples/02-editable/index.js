@@ -57,7 +57,7 @@ export default registerBlockType(
             <div>
               <h2>{ __( 'Call to Action' ) }</h2>
               <div class="message-body">
-                <p>{ props.attributes.message }</p>
+                { props.attributes.message }
               </div>
             </div>
           );

@@ -3,7 +3,6 @@
  */
 import icon from './icon';
 import './style.scss';
-import './editor.scss';
 
 /**
  * Internal block libraries
