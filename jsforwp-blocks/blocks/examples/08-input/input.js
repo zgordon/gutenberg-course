@@ -13,9 +13,6 @@ const { Component } = wp.element;
   * Create an input field Component
  */
 export default class Input extends Component {
-  constructor( props ) {
-    super( ...arguments );
-  }
   render() {
     return (
       <p>

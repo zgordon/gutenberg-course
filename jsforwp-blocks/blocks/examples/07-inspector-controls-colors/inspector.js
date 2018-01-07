@@ -22,9 +22,6 @@ const {
  */
 export default class Inspector extends Component {
 
-  constructor( props ) {
-    super( ...arguments );
-  }
   render() {
     return (
       <InspectorControls key="inspector">
