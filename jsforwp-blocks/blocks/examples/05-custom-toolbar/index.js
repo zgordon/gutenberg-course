@@ -67,9 +67,7 @@ export default registerBlockType(
                   		value={ props.attributes.alignment }
                   		onChange={ ( value ) => props.setAttributes( { alignment: value } ) }
                   	/>
-                    <Toolbar
-                      className='components-toolbar'
-                    >
+                    <Toolbar>
                       <Tooltip text={ __( 'High Contrast' )  }>
                         <Button
                           className={ classnames(
