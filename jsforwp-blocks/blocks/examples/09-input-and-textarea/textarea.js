@@ -13,9 +13,6 @@ const { Component } = wp.element;
   * Create a textarea field Component
  */
 export default class Textarea extends Component {
-  constructor() {
-    super( ...arguments );
-  }
   render() {
     return [
       <label
