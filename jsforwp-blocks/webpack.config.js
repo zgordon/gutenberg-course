@@ -5,10 +5,10 @@ const ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
 
 // Set different CSS extraction for editor only and common block styles
 const blocksCSSPlugin = new ExtractTextPlugin( {
-  filename: '../css/blocks.style.css',
+  filename: './assets/css/blocks.style.css',
 } );
 const editBlocksCSSPlugin = new ExtractTextPlugin( {
-  filename: '../css/blocks.editor.css',
+  filename: './assets/css/blocks.editor.css',
 } );
 
 // Configuration for the ExtractTextPlugin.
