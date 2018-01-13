@@ -40,7 +40,7 @@ function jsforwpblocks_templates( $args, $post_type ) {
 //add_filter( 'register_post_type_args', 'jsforwpblocks_templates', 20, 2 );
 
 /**
- * Enqueue block editor JavaScript and CSS
+ * Enqueue block editor only JavaScript and CSS
  */
 function jsforwpblocks_editor_scripts()
 {
@@ -81,7 +81,7 @@ add_action( 'enqueue_block_editor_assets', 'jsforwpblocks_editor_scripts' );
 
 
 /**
- * Enqueue block editor JavaScript and CSS
+ * Enqueue front end and editor JavaScript and CSS
  */
 function jsforwpblocks_scripts()
 {
