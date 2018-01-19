@@ -168,7 +168,17 @@ function jsforwp_dynamic_alt_block_render( $attributes ) {
 
 }
 
-// Hook server side rendering into render callback
-register_block_type( 'jsforwp/dynamic-alt', [
-    'render_callback' => 'jsforwp_dynamic_alt_block_render',
-] );
+
+/**
+ * Hook server side rendering into render callback
+ */
+function jsforwp_register_render_callback() {
+
+	register_block_type( 'jsforwp/dynamic-alt', [
+	    'render_callback' => 'jsforwp_dynamic_alt_block_render',
+	] );
+
+}
+
+// Hook render callback function into plugins loaded hook
+add_action( 'plugins_loaded', 'jsforwp_register_render_callback' );
