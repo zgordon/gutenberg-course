@@ -163,6 +163,7 @@ function jsforwp_dynamic_alt_block_render( $attributes ) {
       );
 
     }
+	$markup .= '</ul>';
 
     return $markup;
 
