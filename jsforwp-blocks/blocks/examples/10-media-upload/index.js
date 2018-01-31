@@ -11,7 +11,7 @@ const { __ } = wp.i18n;
 const {
   registerBlockType,
   Editable,
-  MediaUploadButton,
+  MediaUpload,
 } = wp.blocks;
 const {
   Button,
@@ -28,7 +28,7 @@ export default registerBlockType(
         icon: icons.upload,
         keywords: [
             __( 'Image' ),
-            __( 'MediaUploadButton' ),
+            __( 'MediaUpload' ),
             __( 'Message' ),
         ],
         attributes: {
@@ -68,19 +68,20 @@ export default registerBlockType(
 
               { ! props.attributes.imgID ? (
 
-                <MediaUploadButton
-                  buttonProps={ {
-                    className: 'components-button button button-large'
-                  } }
+                <MediaUpload
                   onSelect={ onSelectImage }
                   type="image"
                   value={ props.attributes.imgID }
-                >
-                  <Button>
-                    { icons.upload }
-                    { __( ' Upload Image') }
-                  </Button>
-                </MediaUploadButton>
+                  render={ ( { open } ) => (
+                    <Button
+                      className="components-button button button-large"
+                      onClick={ open }
+                    >
+                      { icons.upload }
+                      { __( 'Upload Image' ) }
+                    </Button>
+                  ) }
+                />
 
               ) : (
 
