@@ -1,0 +1,73 @@
+/**
+ * Block dependencies
+ */
+import classnames from 'classnames';
+import Inspector from './inspector';
+import Edit from './edit';
+import icon from './icon';
+import attributes from './attributes';
+import './style.scss';
+
+const { __ } = wp.i18n;
+const {
+    registerBlockType,
+    RichText,
+} = wp.blocks;
+
+function getSettings( attributes ) {
+    let settings = [];
+    for( let attribute in attributes ) {
+        let value = attributes[ attribute ];
+        if( 'boolean' === typeof attributes[ attribute ] ) {
+            value = value.toString();
+        }
+        settings.push( <li>{ attribute }: { value }</li> );
+    }
+    return settings;
+}
+
+/**
+ * Register static block example block
+ */
+export default registerBlockType(
+    'jsforwpblocks/form-fields',
+    {
+        title: __( 'Example - Form Fields', 'jsforwpblocks' ),
+        description: __( 'An example of how to use form component in a block.', 'jsforwpblocks'),        
+        category: 'common',
+        icon,
+        keywords: [
+        __( 'Palette', 'jsforwpblocks' ),
+        __( 'Settings', 'jsforwpblocks' ),
+        __( 'Scheme', 'jsforwpblocks' ),
+        ],
+        attributes,
+        getEditWrapperProps( attributes ) {
+            const { blockAlignment } = attributes;
+            if ( 'left' === blockAlignment || 'right' === blockAlignment || 'full' === blockAlignment ) {
+                return { 'data-align': blockAlignment };
+            }
+        },
+        edit: props => {
+            const { attributes: { textAlignment, blockAlignment, colorPaletteControl, checkboxControl, radioControl, rangeControl, textControl, textareaControl, toggleControl, selectControl },
+                attributes, isSelected, className, setAttributes } = props;
+
+            return [
+                isSelected && <Inspector { ...{ setAttributes, ...props} } />,
+                <Edit { ...{ setAttributes, ...props } } />
+            ];
+        },
+        save: props => {
+            const { attributes: { blockAlignment, textAlignment }, attributes } = props;
+
+            const settings = getSettings( attributes );
+
+            return (
+                <div>
+                    <p>{ __( 'Check the settings', 'jsforwpblocks' ) }</p>
+                    { settings }
+                </div>
+            );
+        },
+    },
+);

@@ -1,0 +1,128 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-wp-i18n\n"
+
+#: blocks/index.js:2
+msgid "jsforwp"
+msgstr ""
+
+#: blocks/register-block-type/00-demo/index.js:17
+msgid "Block Demo"
+msgstr ""
+
+#: blocks/register-block-type/00-demo/index.js:27
+msgid "registerBlockType - Demo"
+msgstr ""
+
+#: blocks/register-block-type/00-demo/index.js:29
+msgid ""
+"A demonstration block for learning how to register your own blocks with "
+"registerBlockType()"
+msgstr ""
+
+#: blocks/register-block-type/00-demo/index.js:35
+msgid "Example"
+msgstr ""
+
+#: blocks/register-block-type/00-demo/index.js:36
+msgid "Project"
+msgstr ""
+
+#: blocks/register-block-type/00-demo/index.js:37
+msgid "Code Samples"
+msgstr ""
+
+#: blocks/register-block-type/00-demo/index.js:61
+msgid "Block Alignment"
+msgstr ""
+
+#: blocks/register-block-type/00-demo/index.js:72
+msgid "Enter your ipsum here.."
+msgstr ""
+
+#: blocks/register-block-type/01-title/index.js:8
+msgid "registerBlockType [1/8] - Title Setting"
+msgstr ""
+
+#: blocks/register-block-type/01-title/index.js:9
+msgid ""
+"The title setting for registerBlockType() gives your block a searchable, "
+"human readable name.  It should be escaped using wp.i18n.__()"
+msgstr ""
+
+#: blocks/register-block-type/02-category/index.js:8
+msgid "registerBlockType [2/8] - Category Setting"
+msgstr ""
+
+#: blocks/register-block-type/02-category/index.js:9
+msgid ""
+"The category setting for registerBlockType() determines the heading / "
+"section / category in which a user can find your block.  Options include "
+"\"common\", \"formatting\", \"layout\", \"widgets\" and \"embed.\""
+msgstr ""
+
+#: blocks/register-block-type/03-icon/index.js:8
+msgid "registerBlockType [3/8] - Icon Setting"
+msgstr ""
+
+#: blocks/register-block-type/03-icon/index.js:9
+msgid ""
+"The icon setting for registerBlockType() determines what icon will "
+"represent your custom block.  Can use a WP Dashicon or custom SVG."
+msgstr ""
+
+#: blocks/register-block-type/04-keywords/index.js:8
+msgid "registerBlockType [4/8] - Keywords Setting"
+msgstr ""
+
+#: blocks/register-block-type/04-keywords/index.js:9
+msgid ""
+"The keyword setting for registerBlockType() provides three additional "
+"keyword / phrases that will display your block when searched for. Limited "
+"to 3."
+msgstr ""
+
+#: blocks/register-block-type/05-edit/index.js:10
+msgid ""
+"The edit setting for registerBlockType() determines what will display in "
+"the editor area for the block. This includes block markup and "
+"functionality. Must return a valid element using wp.element.createElement() "
+"or JSX. Also accepts dynamic data via a \"props\" parameter."
+msgstr ""
+
+#: blocks/register-block-type/05-edit/index.js:9
+msgid "registerBlockType [5/8] - Edit Setting"
+msgstr ""
+
+#: blocks/register-block-type/06-save/index.js:10
+msgid ""
+"The save setting for registerBlockType() determines what be displayed when "
+"the block is converted to content for the frontend. Must return a valid "
+"React element using wp.element.createElement() or JSX.  Also accepts "
+"dynamic data as a props parameter."
+msgstr ""
+
+#: blocks/register-block-type/06-save/index.js:9
+msgid "registerBlockType [6/8] - Save Setting"
+msgstr ""
+
+#: blocks/register-block-type/07-attributes/index.js:10
+msgid ""
+"The attribute setting identifies what dynamic content we are using in our "
+"blocks. Several attribute options exist depending on what types of data we "
+"are using. Attribute settings are optional if your block uses no dynamic "
+"data. This data is then made available via props.attributes.name."
+msgstr ""
+
+#: blocks/register-block-type/07-attributes/index.js:9
+msgid "registerBlockType [7/8] - Attribute Setting\n"
+msgstr ""
+
+#: blocks/register-block-type/08-all/index.js:8
+msgid "registerBlockType [8/8] - All Together"
+msgstr ""
+
+#: blocks/register-block-type/08-all/index.js:9
+msgid "Here we see all of the registerBlockType settings together."
+msgstr ""

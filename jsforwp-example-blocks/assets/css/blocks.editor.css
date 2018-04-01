@@ -1,0 +1,22 @@
+.wp-block-jsforwp-static .sorry.warning {
+  background: #C44D58;
+  color: white;
+  font-size: 1.2rem; }
+.editor-visual-editor .wp-block-jsforwp-custom-toolbar p {
+  font-size: 1.4rem; }
+.wp-block-jsforwp-media-upload .image-wrapper {
+  position: relative; }
+
+.wp-block-jsforwp-media-upload button.remove-image {
+  background-color: red;
+  border: 2px red solid;
+  padding: 5px 5px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: .9; }
+  .wp-block-jsforwp-media-upload button.remove-image svg {
+    background: red;
+    fill: white; }
+  .wp-block-jsforwp-media-upload button.remove-image:hover {
+    opacity: 1; }
