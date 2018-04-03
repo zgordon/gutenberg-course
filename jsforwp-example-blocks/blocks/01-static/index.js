@@ -20,7 +20,7 @@ export default registerBlockType(
         title: __( 'Example - Static Block', 'jsforwpblocks' ),
         description: __( 'Demonstration of how to make a static call to action block.', 'jsforwpblocks' ),
         category: 'common',
-        icon: icon,
+        icon,
         keywords: [
             __( 'Banner', 'jsforwpblocks' ),
             __( 'CTA', 'jsforwpblocks' ),
@@ -34,7 +34,7 @@ export default registerBlockType(
               <p>{ __( 'This is really important!', 'jsforwpblocks' ) }</p>
               {
                 isSelected && (
-                  <p className="sorry warning">✋ { __( 'Sorry! You cannot edit this block', 'jsforwpblocks' ) } ✋</p>
+                  <p className="sorry warning">{ __( '✋ Sorry! You cannot edit this block ✋', 'jsforwpblocks' ) }</p>
                 )
               }
             </div>

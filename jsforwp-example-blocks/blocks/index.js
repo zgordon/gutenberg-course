@@ -1,4 +1,4 @@
-import '../i18n.js';
+import './i18n.js';
 
 /**
  * Import example blocks

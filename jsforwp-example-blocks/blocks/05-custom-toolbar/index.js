@@ -31,9 +31,9 @@ export default registerBlockType(
     'jsforwpblocks/custom-toolbar',
     {
         title: __( 'Example - Custom Toolbar', 'jsforwpblocks' ),
-        description: __( 'An example of how to add a custom buttom to the block toolbar.', 'jsforwpblocks'),                
+        description: __( 'An example of how to add a custom buttom to the block toolbar.', 'jsforwpblocks'),
         category: 'common',
-        icon: icon,
+        icon,
         keywords: [
             __( 'Button', 'jsforwpblocks' ),
             __( 'Settings', 'jsforwpblocks' ),
@@ -69,20 +69,17 @@ export default registerBlockType(
                 className,
                 { 'high-contrast': highContrast },
             );
-            const onChangeBlockAlignment = blockAlignment => setAttributes( { blockAlignment } );
-            const onChangeAlignment = alignment => props.setAttributes( { alignment } );
-            const toggleHighContrast = () => props.setAttributes( { highContrast: ! highContrast } );
             return (
                 <div className={ classes }>
                     { isSelected && (
                         <BlockControls key="custom-controls">
                             <BlockAlignmentToolbar
                                 value={ blockAlignment }
-                                onChange={ onChangeBlockAlignment }
+                                onChange={ blockAlignment => setAttributes( { blockAlignment } ) }
                             />
                             <AlignmentToolbar
                                 value={ alignment }
-                                onChange={ onChangeAlignment }
+                                onChange={ alignment => props.setAttributes( { alignment } ) }
                             />
                             <Toolbar>
                                 <Tooltip text={ __( 'High Contrast', 'jsforwpblocks' )  }>
@@ -92,7 +89,7 @@ export default registerBlockType(
                                             'components-toolbar__control',
                                             { 'is-active': highContrast },
                                         ) }
-                                        onClick={ toggleHighContrast }
+                                        onClick={ () => setAttributes( { highContrast: ! highContrast } ) }
                                     >
                                         { icon }
                                     </Button>

@@ -122,9 +122,9 @@ export default class Inspector extends Component {
                         label={ __( 'Select Control', 'jsforwpblocks' ) }
                         value={ selectControl }
                         options={ [
-                            { value: 'a', label: 'Option A' },
-                            { value: 'b', label: 'Option B' },
-                            { value: 'c', label: 'Option C' },
+                            { value: 'a', label: __( 'Option A', 'jsforwpblocks' ) },
+                            { value: 'b', label: __( 'Option B', 'jsforwpblocks' ) },
+                            { value: 'c', label: __( 'Option C', 'jsforwpblocks' ) },
                         ] }
                         onChange={ selectControl => setAttributes( { selectControl } ) }
                     />

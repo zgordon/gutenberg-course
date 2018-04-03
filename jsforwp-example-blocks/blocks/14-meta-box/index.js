@@ -30,7 +30,7 @@ export default registerBlockType(
             text: {
                 type: 'string',
                 source: 'meta',
-                meta: 'jsforwp_gb_metabox',
+                meta: 'jsforwpblocks_gb_metabox',
             },
         },
         edit: props => {

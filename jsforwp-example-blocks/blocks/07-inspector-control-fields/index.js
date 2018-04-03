@@ -23,7 +23,7 @@ export default registerBlockType(
     'jsforwpblocks/inspector-control-fields',
     {
         title: __( 'Example - Inspector Fields', 'jsforwpblocks' ),
-        description: __( 'An example of how to use form fields in the Inspector element.', 'jsforwpblocks'),        
+        description: __( 'An example of how to use form fields in the Inspector element.', 'jsforwpblocks'),
         category: 'common',
         icon,
         keywords: [

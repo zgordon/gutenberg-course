@@ -8,6 +8,7 @@ import icon from './icon';
  * Internal block libraries
  */
 const { __ } = wp.i18n;
+const { Fragment } = wp.element;
 const {
     registerBlockType,
     UrlInput,
@@ -42,25 +43,27 @@ export default registerBlockType(
             url: {
                 type: 'string',
                 source: 'attribute',
-                selector: 'a',
                 attribute: 'href',
+                selector: 'a',
             },
         },
         edit: props => {
-            const { attributes: { text, url }, className, isSelected, setAttributes } = props;
+            const { attributes: { text, url },
+                className, isSelected, setAttributes } = props;
             return (
                 <div className={ className }>
                     { isSelected ? (
-                        [
+
+                        <Fragment>
                             <TextControl
                                 id="example-input-field"
                                 label={ __( 'Link Text', 'jsforwpblocks' ) }
                                 value={ text }
                                 onChange={ text => setAttributes( { text } ) }
-                            />,
-                                <p>{ __( 'Link URL', 'jsforwpblocks' ) }</p>,
+                            />
+                            <p>{ __( 'Link URL', 'jsforwpblocks' ) }</p>
                             <form
-                                className="blocks-button__inline-link"
+                                className="blocks-format-toolbar__link-modal-line blocks-format-toolbar__link-modal-line"
                                 onSubmit={ event => event.preventDefault() }
                             >
                                 <Tooltip text="Add Link">
@@ -77,7 +80,8 @@ export default registerBlockType(
                                     type="submit"
                                 />
                             </form>
-                        ]
+                        </Fragment>
+
                     ) : (
 
                         <p>

@@ -3,14 +3,14 @@
 /**
  * Registering meta fields for block attributes that use meta storage
  */
-function jsforwp_register_meta() {
+function jsforwpblocks_register_meta() {
 
     $args = array(
         'type' => 'string',
         'single' => true,
         'show_in_rest' => true,
     );
-    register_meta( 'post', 'jsforwp_gb_metabox', $args );
+    register_meta( 'post', 'jsforwpblocks_gb_metabox', $args );
 
 }
-add_action('init', 'jsforwp_register_meta');
+add_action('init', 'jsforwpblocks_register_meta');

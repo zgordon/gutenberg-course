@@ -9,7 +9,7 @@ import './style.scss';
  */
 const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
-const { PanelBody, PanelRow, RangeControl, Spinner, withAPIData } = wp.components;
+const { Spinner, withAPIData } = wp.components;
 
 registerBlockType(
     'jsforwpblocks/dynamic',

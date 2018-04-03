@@ -33,7 +33,7 @@ export default registerBlockType(
     'jsforwpblocks/form-fields',
     {
         title: __( 'Example - Form Fields', 'jsforwpblocks' ),
-        description: __( 'An example of how to use form component in a block.', 'jsforwpblocks'),        
+        description: __( 'An example of how to use form component in a block.', 'jsforwpblocks'),
         category: 'common',
         icon,
         keywords: [
@@ -49,8 +49,7 @@ export default registerBlockType(
             }
         },
         edit: props => {
-            const { attributes: { textAlignment, blockAlignment, colorPaletteControl, checkboxControl, radioControl, rangeControl, textControl, textareaControl, toggleControl, selectControl },
-                attributes, isSelected, className, setAttributes } = props;
+            const { setAttributes } = props;
 
             return [
                 isSelected && <Inspector { ...{ setAttributes, ...props} } />,
@@ -58,14 +57,16 @@ export default registerBlockType(
             ];
         },
         save: props => {
-            const { attributes: { blockAlignment, textAlignment }, attributes } = props;
+            const { attributes } = props;
 
             const settings = getSettings( attributes );
 
             return (
                 <div>
                     <p>{ __( 'Check the settings', 'jsforwpblocks' ) }</p>
-                    { settings }
+                    <ul>
+                        { settings }
+                    </ul>
                 </div>
             );
         },

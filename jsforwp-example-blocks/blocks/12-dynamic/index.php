@@ -3,14 +3,15 @@
 /**
  * Server rendering for /blocks/examples/12-dynamic
  */
-function jsforwp_dynamic_block_render( $attributes ) {
+function jsforwpblocks_dynamic_block_render( $attributes ) {
 
     $recent_posts = wp_get_recent_posts( [
         'numberposts' => 3,
         'post_status' => 'publish',
     ] );
-    if ( count( $recent_posts ) === 0 ) {
-        return 'No posts';
+
+    if ( 0 === count( $recent_posts ) ) {
+        return '<p>No posts</p>';
     }
     $markup = '<ul>';
 
@@ -31,9 +32,10 @@ function jsforwp_dynamic_block_render( $attributes ) {
 function jsforwpblocks_register_blocks() {
   // Hook server side rendering into render callback
   register_block_type( 'jsforwpblocks/dynamic', [
-      'render_callback' => 'jsforwp_dynamic_block_render',
+      'render_callback' => 'jsforwpblocks_dynamic_block_render',
   ] );
 }
+
 // Make sure that Gutenberg is available
 if ( function_exists( 'register_block_type' ) ) {
   add_action( 'init', 'jsforwpblocks_register_blocks' );

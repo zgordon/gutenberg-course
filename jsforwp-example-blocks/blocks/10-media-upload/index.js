@@ -50,29 +50,31 @@ export default registerBlockType(
             }
         },
         edit: props => {
+            const { attributes: { imgID, imgURL, imgAlt },
+                className, setAttributes, isSelected } = props;
             const onSelectImage = img => {
-                props.setAttributes( {
+                setAttributes( {
                     imgID: img.id,
                     imgURL: img.url,
                     imgAlt: img.alt,
                 } );
             };
             const onRemoveImage = () => {
-                props.setAttributes({
+                setAttributes({
                     imgID: null,
                     imgURL: null,
                     imgAlt: null,
                 });
             }
             return (
-                <div className={ props.className }>
+                <div className={ className }>
 
-                    { ! props.attributes.imgID ? (
+                    { ! imgID ? (
 
                         <MediaUpload
                             onSelect={ onSelectImage }
                             type="image"
-                            value={ props.attributes.imgID }
+                            value={ imgID }
                             render={ ( { open } ) => (
                                 <Button
                                     className={ "button button-large" }
@@ -89,11 +91,11 @@ export default registerBlockType(
 
                         <p class="image-wrapper">
                             <img
-                                src={ props.attributes.imgURL }
-                                alt={ props.attributes.imgAlt }
+                                src={ imgURL }
+                                alt={ imgAlt }
                             />
 
-                            { props.isSelected ? (
+                            { isSelected ? (
 
                                 <Button
                                     className="remove-image"
@@ -111,11 +113,12 @@ export default registerBlockType(
             );
         },
         save: props => {
+            const { imgURL, imgAlt } = props.attributes;
             return (
                 <p>
                     <img
-                        src={props.attributes.imgURL}
-                        alt={props.attributes.imgAlt}
+                        src={ imgURL }
+                        alt={ imgAlt }
                     />
                 </p>
             );

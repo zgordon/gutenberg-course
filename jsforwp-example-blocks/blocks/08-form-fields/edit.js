@@ -2,7 +2,6 @@
  * Internal block libraries
  */
 const { __ } = wp.i18n;
-const { settings } = wp.date;
 const { Component } = wp.element;
 const {
     ColorPalette,
@@ -43,7 +42,7 @@ export default class Edit extends Component {
                 />
 
                 <ColorPalette
-                    value={ this.props.attributes.colorPaletteControl }
+                    value={ colorPaletteControl }
                     onChange={ colorPaletteControl => setAttributes( { colorPaletteControl } ) }
                 />
 
