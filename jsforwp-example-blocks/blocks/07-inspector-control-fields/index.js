@@ -14,7 +14,17 @@ const {
     RichText,
 } = wp.blocks;
 
-let settings = [];
+function getSettings( attributes ) {
+    let settings = [];
+    for( let attribute in attributes ) {
+        let value = attributes[ attribute ];
+        if( 'boolean' === typeof attributes[ attribute ] ) {
+            value = value.toString();
+        }
+        settings.push( <li>{ attribute }: { value }</li> );
+    }
+    return settings;
+}
 
 /**
  * Register static block example block
@@ -42,14 +52,7 @@ export default registerBlockType(
             const { attributes: { textAlignment, blockAlignment, message },
                 attributes, isSelected, className, setAttributes } = props;
 
-            settings.length = 0;
-            for( let attribute in attributes ) {
-                let value = attributes[ attribute ];
-                if( 'boolean' === typeof attributes[ attribute ] ) {
-                    value = value.toString();
-                }
-                settings.push( <li>{ attribute }: { value }</li> );
-            }
+            let settings = getSettings( attributes );
 
             return [
                 isSelected && <Inspector { ...{ setAttributes, ...props} } />,
@@ -65,8 +68,11 @@ export default registerBlockType(
             ];
         },
         save: props => {
-            const { textAlignment, blockAlignment } = props.attributes;
-            return (
+            const { attributes: { textAlignment, blockAlignment }, attributes } = props;
+
+            let settings = getSettings( attributes );
+
+            return(
                 <div
                   className={ `align${blockAlignment}` }
                   style={ { textAlign: textAlignment } }
