@@ -2,7 +2,6 @@
  * Internal block libraries
  */
 const { __ } = wp.i18n;
-const { settings } = wp.date;
 const { Component } = wp.element;
 const {
     InspectorControls,
