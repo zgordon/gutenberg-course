@@ -49,7 +49,7 @@ export default registerBlockType(
             }
         },
         edit: props => {
-            const { setAttributes } = props;
+            const { isSelected, setAttributes } = props;
 
             return [
                 isSelected && <Inspector { ...{ setAttributes, ...props} } />,
