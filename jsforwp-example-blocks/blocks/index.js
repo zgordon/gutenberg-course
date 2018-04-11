@@ -13,5 +13,6 @@ import './07-inspector-control-fields';
 import './08-form-fields';
 import './10-media-upload';
 import './11-url-input';
+import './11-url-input-conditional';
 import './12-dynamic';
 import './14-meta-box';
