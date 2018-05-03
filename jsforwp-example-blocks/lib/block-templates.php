@@ -2,8 +2,8 @@
 
 namespace Gutenberg_Courses\Example_Blocks;
 
-//add_filter( 'register_post_type_args', __NAMESPACE__ . '\templates', 20, 2 );
-function templates( $args, $post_type ) {
+//add_filter( 'register_post_type_args', __NAMESPACE__ . '\add_template_to_post_type', 20, 2 );
+function add_template_to_post_type( $args, $post_type ) {
 
 	if ( 'post' !== $post_type ) {
 		return $args;

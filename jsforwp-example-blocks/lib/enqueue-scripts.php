@@ -2,11 +2,11 @@
 
 namespace Gutenberg_Courses\Example_Blocks;
 
-add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\editor_scripts' );
+add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\enqueue_block_editor_assets' );
 /**
  * Enqueue block editor only JavaScript and CSS.
  */
-function editor_scripts()
+function enqueue_block_editor_assets()
 {
 
     // Make paths variables so we don't write em twice ;)
@@ -31,11 +31,11 @@ function editor_scripts()
 
 }
 
-add_action('enqueue_block_assets', __NAMESPACE__ . '\scripts');
+add_action('enqueue_block_assets', __NAMESPACE__ . '\enqueue_assets');
 /**
  * Enqueue front end and editor JavaScript and CSS.
  */
-function scripts()
+function enqueue_assets()
 {
     // Make paths variables so we don't write em twice ;)
     $blockPath = '../assets/js/frontend.blocks.js';
