@@ -16,10 +16,10 @@ add_action( 'init', 'register_dynamic_block' );
  * @return void
  */
 function register_dynamic_block() {
-  // Hook server side rendering into render callback
-  register_block_type( 'jsforwpblocks/dynamic', [
-      'render_callback' => __NAMESPACE__ . '\render_dynamic_block',
-  ] );
+	// Hook server side rendering into render callback
+	register_block_type( 'jsforwpblocks/dynamic', [
+		'render_callback' => __NAMESPACE__ . '\render_dynamic_block',
+	] );
 }
 
 /**
@@ -37,9 +37,9 @@ function render_dynamic_block() {
 
 	$markup = '<ul>';
 
-	foreach( $recent_posts as $post ) {
-		$post_id = $post['ID'];
-		$markup .= sprintf(
+	foreach ( $recent_posts as $post ) {
+		$post_id  = $post['ID'];
+		$markup  .= sprintf(
 			'<li><a href="%1$s">%2$s</a></li>',
 			esc_url( get_permalink( $post_id ) ),
 			esc_html( get_the_title( $post_id ) )
