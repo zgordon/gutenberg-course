@@ -1,5 +1,6 @@
 <?php
 
+//add_filter( 'register_post_type_args', 'jsforwpblocks_templates', 20, 2 );
 function jsforwpblocks_templates( $args, $post_type ) {
 
   if ( $post_type == 'post' ) {
@@ -21,4 +22,3 @@ function jsforwpblocks_templates( $args, $post_type ) {
   return $args;
 
 }
-//add_filter( 'register_post_type_args', 'jsforwpblocks_templates', 20, 2 );

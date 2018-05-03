@@ -1,7 +1,8 @@
 <?php
 
+add_action( 'enqueue_block_editor_assets', 'jsforwpblocks_editor_scripts' );
 /**
- * Enqueue block editor only JavaScript and CSS
+ * Enqueue block editor only JavaScript and CSS.
  */
 function jsforwpblocks_editor_scripts()
 {
@@ -27,12 +28,10 @@ function jsforwpblocks_editor_scripts()
     );
 
 }
-// Hook scripts function into block editor hook
-add_action( 'enqueue_block_editor_assets', 'jsforwpblocks_editor_scripts' );
 
-
+add_action('enqueue_block_assets', 'jsforwpblocks_scripts');
 /**
- * Enqueue front end and editor JavaScript and CSS
+ * Enqueue front end and editor JavaScript and CSS.
  */
 function jsforwpblocks_scripts()
 {
@@ -59,6 +58,3 @@ function jsforwpblocks_scripts()
     );
 
 }
-
-// Hook scripts function into block editor hook
-add_action('enqueue_block_assets', 'jsforwpblocks_scripts');
