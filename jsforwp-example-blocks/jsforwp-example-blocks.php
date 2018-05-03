@@ -1,17 +1,22 @@
 <?php
 /**
+ * Plugin's bootstrap file to launch the plugin.
+ *
+ * @package     Gutenberg_Courses\Example_Blocks
+ * @author      Zac Gordon (@zgordon)
+ * @license     GPL2+
+ *
+ * @wordpress-plugin
  * Plugin Name: Gutenberg - Example Blocks
- * Plugin URI: https://gutenberg.courses
+ * Plugin URI:  https://gutenberg.courses
  * Description: An plugin containing example blocks for developers.  From <a href="https://gutenberg.courses/development">Zac Gordon's Gutenberg Development Course</a>.
+ * Version:     2.0.0
+ * Author:      Zac Gordon (@zgordon)
+ * Author URI:  https://twitter.com/zgordon
  * Text Domain: jsforwpblocks
  * Domain Path: /languages
- * Author: Zac Gordon (@zgordon)
- * Author URI: https://twitter.com/zgordon
- * Version: 2.0.0
- * License: GPL2+
- * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
- *
- * @package JSFORWPBLOCKS
+ * License:     GPL2+
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  */
 
 //  Exit if accessed directly.
