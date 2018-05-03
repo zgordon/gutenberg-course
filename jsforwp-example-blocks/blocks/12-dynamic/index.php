@@ -25,7 +25,7 @@ function register_dynamic_block() {
 /**
  * Server rendering for /blocks/examples/12-dynamic
  */
-function render_dynamic_block( $attributes ) {
+function render_dynamic_block() {
 	$recent_posts = wp_get_recent_posts( [
 		'numberposts' => 3,
 		'post_status' => 'publish',
