@@ -1,9 +1,11 @@
 <?php
 
+namespace Gutenberg_Courses\Example_Block\Blocks\Dynamic;
+
 /**
  * Server rendering for /blocks/examples/12-dynamic
  */
-function jsforwpblocks_dynamic_block_render( $attributes ) {
+function render_dynamic_block( $attributes ) {
 
     $recent_posts = wp_get_recent_posts( [
         'numberposts' => 3,
@@ -29,14 +31,14 @@ function jsforwpblocks_dynamic_block_render( $attributes ) {
 
 }
 
-function jsforwpblocks_register_blocks() {
-  // Hook server side rendering into render callback
-  register_block_type( 'jsforwpblocks/dynamic', [
-      'render_callback' => 'jsforwpblocks_dynamic_block_render',
-  ] );
-}
-
 // Make sure that Gutenberg is available
 if ( function_exists( 'register_block_type' ) ) {
-  add_action( 'init', 'jsforwpblocks_register_blocks' );
+	add_action( 'init', 'register_the_blocks' );
+}
+
+function register_the_blocks() {
+  // Hook server side rendering into render callback
+  register_block_type( 'jsforwpblocks/dynamic', [
+      'render_callback' => __NAMESPACE__ . '\render_dynamic_block',
+  ] );
 }
