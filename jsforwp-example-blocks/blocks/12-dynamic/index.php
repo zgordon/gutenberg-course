@@ -45,7 +45,6 @@ function render_dynamic_block() {
 			esc_html( get_the_title( $post_id ) )
 		);
 	}
-	$markup .= '<ul>';
 
-	return $markup;
+	return "{$markup}<ul>";
 }
