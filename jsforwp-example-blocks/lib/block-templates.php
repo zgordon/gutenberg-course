@@ -1,7 +1,9 @@
 <?php
 
-//add_filter( 'register_post_type_args', 'jsforwpblocks_templates', 20, 2 );
-function jsforwpblocks_templates( $args, $post_type ) {
+namespace Gutenberg_Courses\Example_Blocks;
+
+//add_filter( 'register_post_type_args', __NAMESPACE__ . '\templates', 20, 2 );
+function templates( $args, $post_type ) {
 
 	if ( 'post' !== $post_type ) {
 		return $args;

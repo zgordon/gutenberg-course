@@ -1,10 +1,12 @@
 <?php
 
-add_action('init', 'jsforwpblocks_register_meta');
+namespace Gutenberg_Courses\Example_Blocks;
+
+add_action('init', __NAMESPACE__ . '\register_meta');
 /**
  * Registering meta fields for block attributes that use meta storage
  */
-function jsforwpblocks_register_meta() {
+function register_meta() {
 
     $args = array(
         'type' => 'string',

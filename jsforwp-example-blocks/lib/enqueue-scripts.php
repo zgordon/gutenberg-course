@@ -1,10 +1,12 @@
 <?php
 
-add_action( 'enqueue_block_editor_assets', 'jsforwpblocks_editor_scripts' );
+namespace Gutenberg_Courses\Example_Blocks;
+
+add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\editor_scripts' );
 /**
  * Enqueue block editor only JavaScript and CSS.
  */
-function jsforwpblocks_editor_scripts()
+function editor_scripts()
 {
 
     // Make paths variables so we don't write em twice ;)
@@ -29,11 +31,11 @@ function jsforwpblocks_editor_scripts()
 
 }
 
-add_action('enqueue_block_assets', 'jsforwpblocks_scripts');
+add_action('enqueue_block_assets', __NAMESPACE__ . '\scripts');
 /**
  * Enqueue front end and editor JavaScript and CSS.
  */
-function jsforwpblocks_scripts()
+function scripts()
 {
     // Make paths variables so we don't write em twice ;)
     $blockPath = '../assets/js/frontend.blocks.js';
