@@ -33,30 +33,34 @@ function enqueue_block_editor_assets()
 
 add_action('enqueue_block_assets', __NAMESPACE__ . '\enqueue_assets');
 /**
- * Enqueue front end and editor JavaScript and CSS.
+ * Enqueue front end and editor JavaScript and CSS assets.
  */
-function enqueue_assets()
-{
-    // Make paths variables so we don't write em twice ;)
-    $blockPath = '/assets/js/frontend.blocks.js';
-    $stylePath = '/assets/css/blocks.style.css';
+function enqueue_assets() {
+	$stylePath = '/assets/css/blocks.style.css';
+	wp_enqueue_style(
+		'jsforwp-blocks',
+		_get_plugin_url() . $stylePath,
+		[ 'wp-blocks' ],
+		filemtime( _get_plugin_directory() . $stylePath )
+	);
+}
 
-    if( !is_admin() ) {
-        // Enqueue the bundled block JS file
-        wp_enqueue_script(
-            'jsforwp-blocks-frontend',
-	        _get_plugin_url() . $blockPath,
-            [],
-            filemtime( _get_plugin_directory() . $blockPath )
-        );
+add_action('enqueue_block_assets', __NAMESPACE__ . '\enqueue_frontend_assets');
+/**
+ * Enqueue frontend JavaScript and CSS assets.
+ */
+function enqueue_frontend_assets() {
+
+	// If in the backend, bail out.
+    if( is_admin() ) {
+	    return;
     }
 
-    // Enqueue frontend and editor block styles
-    wp_enqueue_style(
-        'jsforwp-blocks',
-	    _get_plugin_url() . $stylePath,
-        [ 'wp-blocks' ],
-        filemtime(_get_plugin_directory() . $stylePath )
+	$blockPath = '/assets/js/frontend.blocks.js';
+    wp_enqueue_script(
+        'jsforwp-blocks-frontend',
+        _get_plugin_url() . $blockPath,
+        [],
+        filemtime( _get_plugin_directory() . $blockPath )
     );
-
 }
