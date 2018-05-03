@@ -3,7 +3,7 @@
 //add_filter( 'register_post_type_args', 'jsforwpblocks_templates', 20, 2 );
 function jsforwpblocks_templates( $args, $post_type ) {
 
-  if ( $post_type == 'post' ) {
+  if ( 'post' == $post_type ) {
     $args['template_lock'] = true;
     $args['template'] = [
       [
