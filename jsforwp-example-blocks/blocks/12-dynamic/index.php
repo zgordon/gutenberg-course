@@ -31,9 +31,10 @@ function render_dynamic_block() {
 		'post_status' => 'publish',
 	] );
 
-	if ( 0 === count( $recent_posts ) ) {
+	if ( empty( $recent_posts ) ) {
 		return '<p>No posts</p>';
 	}
+
 	$markup = '<ul>';
 
 	foreach( $recent_posts as $post ) {
