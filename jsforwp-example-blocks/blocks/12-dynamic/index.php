@@ -7,7 +7,7 @@ if ( ! function_exists( 'register_block_type' ) ) {
 	return;
 }
 
-add_action( 'init', 'register_dynamic_block' );
+add_action( 'init', __NAMESPACE__ . '\register_dynamic_block' );
 /**
  * Register the dynamic block.
  *
