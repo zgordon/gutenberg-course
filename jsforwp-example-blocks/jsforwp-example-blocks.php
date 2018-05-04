@@ -10,7 +10,7 @@
  * Plugin Name: Gutenberg - Example Blocks
  * Plugin URI:  https://gutenberg.courses
  * Description: An plugin containing example blocks for developers.  From <a href="https://gutenberg.courses/development">Zac Gordon's Gutenberg Development Course</a>.
- * Version:     2.0.0
+ * Version:     2.1.0
  * Author:      Zac Gordon (@zgordon)
  * Author URI:  https://twitter.com/zgordon
  * Text Domain: jsforwpblocks
@@ -27,7 +27,7 @@ defined('ABSPATH') || exit;
 /**
  * Gets this plugin's absolute directory path.
  *
- * @since  1.0.0
+ * @since  2.1.0
  * @ignore
  * @access private
  *
@@ -40,7 +40,7 @@ function _get_plugin_directory() {
 /**
  * Gets this plugin's URL.
  *
- * @since  1.0.0
+ * @since  2.1.0
  * @ignore
  * @access private
  *
