@@ -1,42 +1,50 @@
 <?php
 
+namespace Gutenberg_Courses\Example_Block\Blocks\Dynamic;
+
+// Only load if Gutenberg is available.
+if ( ! function_exists( 'register_block_type' ) ) {
+	return;
+}
+
+add_action( 'init', __NAMESPACE__ . '\register_dynamic_block' );
+/**
+ * Register the dynamic block.
+ *
+ * @since 2.1.0
+ *
+ * @return void
+ */
+function register_dynamic_block() {
+	// Hook server side rendering into render callback
+	register_block_type( 'jsforwpblocks/dynamic', [
+		'render_callback' => __NAMESPACE__ . '\render_dynamic_block',
+	] );
+}
+
 /**
  * Server rendering for /blocks/examples/12-dynamic
  */
-function jsforwpblocks_dynamic_block_render( $attributes ) {
+function render_dynamic_block() {
+	$recent_posts = wp_get_recent_posts( [
+		'numberposts' => 3,
+		'post_status' => 'publish',
+	] );
 
-    $recent_posts = wp_get_recent_posts( [
-        'numberposts' => 3,
-        'post_status' => 'publish',
-    ] );
+	if ( empty( $recent_posts ) ) {
+		return '<p>No posts</p>';
+	}
 
-    if ( 0 === count( $recent_posts ) ) {
-        return '<p>No posts</p>';
-    }
-    $markup = '<ul>';
+	$markup = '<ul>';
 
-    foreach( $recent_posts as $post ) {
-        $post_id = $post['ID'];
-        $markup .= sprintf(
-            '<li><a href="%1$s">%2$s</a></li>',
-            esc_url( get_permalink( $post_id ) ),
-            esc_html( get_the_title( $post_id ) )
-        );
-    }
-    $markup .= '<ul>';
+	foreach ( $recent_posts as $post ) {
+		$post_id  = $post['ID'];
+		$markup  .= sprintf(
+			'<li><a href="%1$s">%2$s</a></li>',
+			esc_url( get_permalink( $post_id ) ),
+			esc_html( get_the_title( $post_id ) )
+		);
+	}
 
-    return $markup;
-
-}
-
-function jsforwpblocks_register_blocks() {
-  // Hook server side rendering into render callback
-  register_block_type( 'jsforwpblocks/dynamic', [
-      'render_callback' => 'jsforwpblocks_dynamic_block_render',
-  ] );
-}
-
-// Make sure that Gutenberg is available
-if ( function_exists( 'register_block_type' ) ) {
-  add_action( 'init', 'jsforwpblocks_register_blocks' );
+	return "{$markup}<ul>";
 }

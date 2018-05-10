@@ -1,24 +1,29 @@
 <?php
 
-function jsforwpblocks_templates( $args, $post_type ) {
+namespace Gutenberg_Courses\Example_Blocks;
 
-  if ( $post_type == 'post' ) {
-    $args['template_lock'] = true;
-    $args['template'] = [
-      [
-        'core/image', [
-          'align' => 'left',
-        ]
-      ],
-      [
-        'core/paragraph', [
-          'placeholder' => 'The only thing you can add',
-        ]
-      ]
-    ];
-  }
+//add_filter( 'register_post_type_args', __NAMESPACE__ . '\add_template_to_post_type', 20, 2 );
+function add_template_to_post_type( $args, $post_type ) {
 
-  return $args;
+	if ( 'post' !== $post_type ) {
+		return $args;
+	}
 
+	$args['template_lock'] = true;
+	$args['template']      = [
+		[
+			'core/image',
+			[
+				'align' => 'left',
+			],
+		],
+		[
+			'core/paragraph',
+			[
+				'placeholder' => 'The only thing you can add',
+			],
+		],
+	];
+
+	return $args;
 }
-//add_filter( 'register_post_type_args', 'jsforwpblocks_templates', 20, 2 );
