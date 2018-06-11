@@ -9,7 +9,7 @@
  * @wordpress-plugin
  * Plugin Name: Gutenberg - Example Blocks
  * Plugin URI:  https://gutenberg.courses
- * Description: An plugin containing example blocks for developers.  From <a href="https://gutenberg.courses/development">Zac Gordon's Gutenberg Development Course</a>.
+ * Description: A plugin containing example blocks for developers.  From <a href="https://gutenberg.courses/development">Zac Gordon's Gutenberg Development Course</a>.
  * Version:     2.1.0
  * Author:      Zac Gordon (@zgordon)
  * Author URI:  https://twitter.com/zgordon
