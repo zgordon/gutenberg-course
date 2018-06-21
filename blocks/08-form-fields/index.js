@@ -23,7 +23,7 @@ function getSettings( attributes ) {
         if( 'boolean' === typeof attributes[ attribute ] ) {
             value = value.toString();
         }
-        settings.push( <li>{ attribute }: { value }</li> );
+        settings.push( `<li>{ attribute }: { value }</li>` );
     }
     return settings;
 }

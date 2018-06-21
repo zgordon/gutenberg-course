@@ -74,7 +74,7 @@ export default registerBlockType(
             const { attributes: { textAlignment, blockAlignment, message, highContrast },
                 className, setAttributes } = props;
             const toggleHighContrast = () => setAttributes( { highContrast: ! highContrast } );
-
+            
             return [
                 <InspectorControls>
                     <PanelBody
