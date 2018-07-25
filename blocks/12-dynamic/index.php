@@ -2,12 +2,8 @@
 
 namespace Gutenberg_Courses\Example_Block\Blocks\Dynamic;
 
-// Only load if Gutenberg is available.
-if ( ! function_exists( 'register_block_type' ) ) {
-	return;
-}
 
-add_action( 'init', __NAMESPACE__ . '\register_dynamic_block' );
+add_action( 'plugins_loaded', __NAMESPACE__ . '\register_dynamic_block' );
 /**
  * Register the dynamic block.
  *
@@ -16,10 +12,17 @@ add_action( 'init', __NAMESPACE__ . '\register_dynamic_block' );
  * @return void
  */
 function register_dynamic_block() {
+
+	// Only load if Gutenberg is available.
+	if ( ! function_exists( 'register_block_type' ) ) {
+		return;
+	}
+
 	// Hook server side rendering into render callback
 	register_block_type( 'jsforwpblocks/dynamic', [
 		'render_callback' => __NAMESPACE__ . '\render_dynamic_block',
 	] );
+
 }
 
 /**
