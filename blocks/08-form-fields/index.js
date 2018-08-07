@@ -16,14 +16,14 @@ const {
     RichText,
 } = wp.editor;
 
-function getSettings( attributes ) {
+function getSettings(attributes) {
     let settings = [];
-    for( let attribute in attributes ) {
-        let value = attributes[ attribute ];
-        if( 'boolean' === typeof attributes[ attribute ] ) {
+    for (let attribute in attributes) {
+        let value = attributes[attribute];
+        if ('boolean' === typeof attributes[attribute]) {
             value = value.toString();
         }
-        settings.push( `<li>{ attribute }: { value }</li>` );
+        settings.push(<li>{attribute}: {value}</li>);
     }
     return settings;
 }
@@ -34,22 +34,22 @@ function getSettings( attributes ) {
 export default registerBlockType(
     'jsforwpblocks/form-fields',
     {
-        title: __( 'Example - Form Fields', 'jsforwpblocks' ),
-        description: __( 'An example of how to use form component in a block.', 'jsforwpblocks'),
+        title: __('Example - Form Fields', 'jsforwpblocks'),
+        description: __('An example of how to use form component in a block.', 'jsforwpblocks'),
         category: 'common',
         icon: {
             background: 'rgba(254, 243, 224, 0.52)',
             src: icon,
-        },         
+        },
         keywords: [
-        __( 'Palette', 'jsforwpblocks' ),
-        __( 'Settings', 'jsforwpblocks' ),
-        __( 'Scheme', 'jsforwpblocks' ),
+            __('Palette', 'jsforwpblocks'),
+            __('Settings', 'jsforwpblocks'),
+            __('Scheme', 'jsforwpblocks'),
         ],
         attributes,
-        getEditWrapperProps( attributes ) {
+        getEditWrapperProps(attributes) {
             const { blockAlignment } = attributes;
-            if ( 'left' === blockAlignment || 'right' === blockAlignment || 'full' === blockAlignment ) {
+            if ('left' === blockAlignment || 'right' === blockAlignment || 'full' === blockAlignment) {
                 return { 'data-align': blockAlignment };
             }
         },
@@ -57,20 +57,20 @@ export default registerBlockType(
             const { setAttributes } = props;
 
             return [
-                <Inspector { ...{ setAttributes, ...props} } />,
-                <Edit { ...{ setAttributes, ...props } } />
+                <Inspector {...{ setAttributes, ...props }} />,
+                <Edit {...{ setAttributes, ...props }} />
             ];
         },
         save: props => {
             const { attributes } = props;
 
-            const settings = getSettings( attributes );
+            const settings = getSettings(attributes);
 
             return (
                 <div>
-                    <p>{ __( 'Check the settings', 'jsforwpblocks' ) }</p>
+                    <p>{__('Check the settings', 'jsforwpblocks')}</p>
                     <ul>
-                        { settings }
+                        {settings}
                     </ul>
                 </div>
             );
