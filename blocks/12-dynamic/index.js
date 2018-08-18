@@ -9,7 +9,8 @@ import './style.scss';
  */
 const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
-const { Spinner, withAPIData } = wp.components;
+const { Spinner } = wp.components;
+const { withSelect } = wp.data;
 
 registerBlockType(
     'jsforwpblocks/dynamic',
@@ -21,12 +22,12 @@ registerBlockType(
             src: icon,
         },         
         category: 'widgets',
-        edit: withAPIData( props => {
+        edit: withSelect( select => {
                 return {
-                    posts: `/wp/v2/posts?per_page=3`
+                    posts: select( 'core' ).getEntityRecords( 'postType', 'post', { per_page: 3 } )
                 };
             } )( ( { posts, className, isSelected, setAttributes } ) => {
-                if ( ! posts.data ) {
+                if ( ! posts ) {
                     return (
                         <p className={className} >
                             <Spinner />
@@ -34,12 +35,12 @@ registerBlockType(
                         </p>
                     );
                 }
-                if ( 0 === posts.data.length ) {
+                if ( 0 === posts.length ) {
                     return <p>{ __( 'No Posts', 'jsforwpblocks' ) }</p>;
                 }
                 return (
                     <ul className={ className }>
-                        { posts.data.map( post => {
+                        { posts.map( post => {
                             return (
                                 <li>
                                     <a className={ className } href={ post.link }>
