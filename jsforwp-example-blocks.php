@@ -11,7 +11,7 @@
  * Plugin URI:  https://gutenberg.courses
  * Description: A plugin containing example blocks for developers.  From <a href="https://gutenberg.courses/development">Zac Gordon's Gutenberg Development Course</a>.
  * Version:     2.1.0
- * Author:      Zac Gordon (@zgordon)
+ * Author:      Zac Gordon
  * Author URI:  https://twitter.com/zgordon
  * Text Domain: jsforwpblocks
  * Domain Path: /languages

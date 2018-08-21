@@ -5,7 +5,7 @@
   "main": "blocks/index.js",
   "scripts": {
     "dev": "cross-env BABEL_ENV=default webpack --watch",
-    "build": "cross-env BABEL_ENV=default NODE_ENV=production webpack"
+    "build": "cross-env BABEL_ENV=default NODE_ENV=production webpack -p"
   },
   "devDependencies": {
     "@wordpress/babel-preset-default": "^1.2.0",
@@ -23,8 +23,5 @@
     "sass-loader": "^6.0.7",
     "style-loader": "^0.19.1",
     "webpack": "^3.11.0"
-  },
-  "dependencies": {
-    "lodash": "^4.17.10"
   }
 }
