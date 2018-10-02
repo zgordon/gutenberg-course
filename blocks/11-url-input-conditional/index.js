@@ -13,7 +13,7 @@ const {
     registerBlockType,
 } = wp.blocks;
 const {
-    UrlInput,
+    URLInput,
 } = wp.editor;
 const {
     IconButton,
@@ -76,7 +76,7 @@ export default registerBlockType(
                                 <Tooltip text="Add Link">
                                     {icons.url}
                                 </Tooltip>
-                                <UrlInput
+                                <URLInput
                                     className="url"
                                     value={ url }
                                     onChange={ url => setAttributes( { url } ) }
