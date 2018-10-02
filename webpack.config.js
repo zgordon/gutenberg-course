@@ -65,4 +65,7 @@ module.exports = {
     blocksCSSPlugin,
     editBlocksCSSPlugin,
   ],
+  stats: {
+    children: false
+  }
 };
