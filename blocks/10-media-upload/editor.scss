@@ -1,0 +1,32 @@
+.wp-block-jsforwpblocks-media-upload {
+
+    .image-wrapper {
+        position: relative;
+    }
+
+    button {
+
+        &.remove-image {
+
+            background-color: red;
+            border: 2px red solid;
+            padding: 5px 5px 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: .9;
+
+            svg {
+                background: red;
+                fill: white;
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+
+        }
+
+    }
+
+}

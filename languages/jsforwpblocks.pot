@@ -1,0 +1,48 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: Poedit 2.2\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: blocks/01-static/index.js:18
+msgid "Example - Static Block"
+msgstr ""
+
+#: blocks/01-static/index.js:19
+msgid "Demonstration of how to make a static call to action block."
+msgstr ""
+
+#: blocks/01-static/index.js:29
+msgid "Banner"
+msgstr ""
+
+#: blocks/01-static/index.js:30
+msgid "CTA"
+msgstr ""
+
+#: blocks/01-static/index.js:31
+msgid "Shout Out"
+msgstr ""
+
+#: blocks/01-static/index.js:37
+msgid "Static Call to Action"
+msgstr ""
+
+#: blocks/01-static/index.js:41
+msgid "✋ Sorry! You cannot edit this block ✋"
+msgstr ""
+
+#: blocks/01-static/index.js:50
+msgid "Call to Action"
+msgstr ""
+
+#: blocks/01-static/index.js:51
+msgid "This is really important!"
+msgstr ""

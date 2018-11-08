@@ -1,0 +1,26 @@
+$black: #222;
+$dark: #f7b733;
+$light: rgba(254, 243, 224, 0.52);
+
+.entry-content .wp-block-jsforwpblocks-block-alignment-toolbar,
+.wp-block-jsforwpblocks-block-alignment-toolbar {
+
+    background: $light;
+    border: 5px $dark solid;
+    padding: 1rem;
+
+    h2 {
+        color: $dark;
+        font-size: 2rem;
+        margin: 1rem 0;
+    }
+
+    p {
+        font-size: 1.4rem;
+    }
+
+    li {
+        list-style-position: inside;
+    }
+
+}

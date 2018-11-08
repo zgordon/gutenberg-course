@@ -1,0 +1,32 @@
+$black: #000;
+$dark: #f7b733;
+$light: rgba(254, 243, 224, 0.52);
+
+.entry-content .wp-block-jsforwpblocks-inspector-control-fields,
+.wp-block-jsforwpblocks-inspector-control-fields {
+
+    background: $light;
+    border: 5px $dark solid;
+    padding: 1rem;
+
+    &.high-contrast {
+        background: $black;
+        border-color: $black;
+        color: white;
+    }
+
+    h2 {
+        color: $dark;
+        font-size: 2rem;
+        margin: 1rem 0;
+    }
+
+    p {
+        font-size: 1.4rem;
+    }
+
+    li {
+        list-style-position: inside;
+    }
+
+}
