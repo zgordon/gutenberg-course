@@ -13,7 +13,7 @@ const {
     registerBlockType,
 } = wp.blocks;
 const {
-    UrlInput,
+    URLInput,
 } = wp.editor;
 const {
     IconButton,
@@ -28,7 +28,7 @@ export default registerBlockType(
     'jsforwpblocks/url-input',
     {
         title: __( 'Example - URL Input', 'jsforwpblocks' ),
-        description: __( 'An example of how to use the UrlInput component.', 'jsforwpblocks'),
+        description: __( 'An example of how to use the URLInput component.', 'jsforwpblocks'),
         category: 'common',
         icon: {
             background: 'rgba(254, 243, 224, 0.52)',
@@ -74,7 +74,7 @@ export default registerBlockType(
                                 <Tooltip text="Add Link">
                                     {icon}
                                 </Tooltip>
-                                <UrlInput
+                                <URLInput
                                     className="url"
                                     value={ url }
                                     onChange={ url => setAttributes( { url } ) }
