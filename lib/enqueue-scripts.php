@@ -37,7 +37,7 @@ function enqueue_assets() {
 	wp_enqueue_style(
 		'jsforwp-blocks',
 		_get_plugin_url() . $style_path,
-		[ 'wp-blocks' ],
+		null,
 		filemtime( _get_plugin_directory() . $style_path )
 	);
 }
