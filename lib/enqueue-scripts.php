@@ -23,7 +23,7 @@ function enqueue_block_editor_assets() {
 	wp_enqueue_style(
 		'jsforwp-blocks-editor-css',
 		_get_plugin_url() . $style_path,
-		[ 'wp-blocks' ],
+		[ ],
 		filemtime( _get_plugin_directory() . $style_path )
 	);
 }
