@@ -58,7 +58,7 @@ function _get_plugin_url() {
 
 
 // Internationalization
-include __DIR__ . '/lib/i18n.php';
+// include __DIR__ . '/lib/i18n.php';
 
 // Enqueue JS and CSS
 include __DIR__ . '/lib/register-scripts.php';
@@ -73,7 +73,7 @@ include __DIR__ . '/blocks/12-dynamic/index.php';
 include __DIR__ . '/lib/meta-boxes.php';
 
 // Block Templates
-// include __DIR__ . '/lib/block-templates.php';
+include __DIR__ . '/lib/block-templates.php';
 
 
 

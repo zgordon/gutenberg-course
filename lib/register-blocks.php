@@ -17,17 +17,17 @@ function register_blocks() {
     $blocks = [
         'jsforwpblocks/static',
         'jsforwpblocks/richtext',
-        'jsforwpblocks/text-alignment-toolbar',
-        'jsforwpblocks/block-alignment-toolbar',
-        'jsforwpblocks/custom-toolbar',
-        'jsforwpblocks/inspector-controls',
-        'jsforwpblocks/inspector-control-fields',
-        'jsforwpblocks/form-fields',
-        'jsforwpblocks/media-upload',
-        'jsforwpblocks/url-input',
-        'jsforwpblocks/url-input-conditional',
-        'jsforwpblocks/dynamic',
-        'jsforwpblocks/meta-box',
+        // 'jsforwpblocks/text-alignment-toolbar',
+        // 'jsforwpblocks/block-alignment-toolbar',
+        // 'jsforwpblocks/custom-toolbar',
+        // 'jsforwpblocks/inspector-controls',
+        // 'jsforwpblocks/inspector-control-fields',
+        // 'jsforwpblocks/form-fields',
+        // 'jsforwpblocks/media-upload',
+        // 'jsforwpblocks/url-input',
+        // 'jsforwpblocks/url-input-conditional',
+        // 'jsforwpblocks/dynamic',
+        // 'jsforwpblocks/meta-box',
     ];
 
     // Register each block with same CSS and JS
@@ -39,6 +39,7 @@ function register_blocks() {
          ] );	  
     }
 
+    
 
 }
 

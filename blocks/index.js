@@ -4,7 +4,7 @@
  * Import example blocks
  */
 import "./01-static";
-// import "./02-richtext";
+import "./02-richtext";
 // import "./03-text-alignment-toolbar";
 // import "./04-block-alignment-toolbar";
 // import "./05-custom-toolbar";

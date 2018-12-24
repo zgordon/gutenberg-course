@@ -17,16 +17,11 @@ function register_block_assets() {
 	wp_register_script(
 		'jsforwp-blocks-editor-js',
 		_get_plugin_url() . $editor_js_path,
-		[ 'wp-i18n','wp-editor', 'wp-element', 'wp-blocks', 'wp-components' ],
+		[ 'wp-i18n','wp-editor', 'wp-api-fetch', 'wp-element', 'wp-blocks', 'wp-components' ],
 		filemtime( _get_plugin_directory() . $editor_js_path )
 	);	
 
-	// 
-	wp_add_inline_script(
-		'jsforwp-blocks-editor-js',
-		'wp.i18n.setLocaleData( ' . json_encode( wp_get_jed_locale_data( 'jsforwpblocks' ) ) . ', "jsforwpblocks" );',
-		'before'
-	);
+	wp_set_script_translations( 'jsforwp-blocks-editor-js', 'jsforwpblocks', _get_plugin_directory() . '/languages' );
 
 	// Register editor only styles
 	wp_register_style(
