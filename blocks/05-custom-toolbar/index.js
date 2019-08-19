@@ -33,7 +33,7 @@ export default registerBlockType(
     'jsforwpblocks/custom-toolbar',
     {
         title: __( 'Example - Custom Toolbar', 'jsforwpblocks' ),
-        description: __( 'An example of how to add a custom buttom to the block toolbar.', 'jsforwpblocks'),
+        description: __( 'An example of how to add a custom button to the block toolbar.', 'jsforwpblocks'),
         category: 'common',
         icon: {
             background: 'rgba(254, 243, 224, 0.52)',
