@@ -12,8 +12,17 @@ const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
 const { RichText } = wp.editor;
 
-function getSettings(attributes) {
+// Note: atts changed from attributes, see below
+function getSettings(atts) {
   let settings = [];
+  // The following code sorts the list alphabetically
+  let attributes = {};
+  Object.keys(atts)
+    .sort()
+    .forEach(function(key) {
+      attributes[key] = atts[key];
+    });
+  // End updated code
   for (let attribute in attributes) {
     let value = attributes[attribute];
     if ("boolean" === typeof attributes[attribute]) {
