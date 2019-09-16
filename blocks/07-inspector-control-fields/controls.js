@@ -13,7 +13,7 @@ const {
 /**
  * Create a Block Controls wrapper Component
  */
-export default class Inspector extends Component {
+export default class Controls extends Component {
 
     constructor() {
         super( ...arguments );
