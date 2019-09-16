@@ -49,5 +49,5 @@ function render_dynamic_block() {
 		);
 	}
 
-	return "{$markup}<ul>";
+	return "{$markup}</ul>";
 }
