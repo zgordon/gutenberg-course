@@ -94,7 +94,7 @@ export default registerBlockType(
 
                     ) : (
 
-                        <p class="image-wrapper">
+                        <p className="image-wrapper">
                             <img
                                 src={ imgURL }
                                 alt={ imgAlt }
