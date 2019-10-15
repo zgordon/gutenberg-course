@@ -57,7 +57,7 @@ export default registerBlockType(
             return (
                 <div>
                     <h2>{ __( 'Call to Action', 'jsforwpblocks' ) }</h2>
-                    <div class="message-body">
+                    <div className="message-body">
                         { message }
                     </div>
                 </div>
